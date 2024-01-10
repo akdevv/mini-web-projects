@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0e0d12;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Navbar css properties */
+nav {
+  padding: 10px 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 70%;
+  transition: 0.3s;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  font-family: "Montserrat";
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  padding: 0 13px;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.logo img:hover {
+  border-radius: 50%;
+  box-shadow: 0 0 30px #fff;
+}
+
+/* Main title css properties */
+.main-title {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin: 0;
+  font-family: "Montserrat";
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 100px;
+}
+
+.sub-title {
+  margin: 0;
+  font-family: "Montserrat";
+  text-align: center;
+  color: #fff;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+/* About page content properties */
+.about-content {
+  margin: 50px;
+  padding: 50px;
+  background-color: #202020;
+  border-radius: 20px;
+}
+
+.about-info {
+  display: flex;
+}
+
+img.profile-photo {
+  width: 20%;
+}
+
+.about-para {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-para p {
+  margin: 0 0 0 50px;
+  font-family: "Montserrat";
+  text-align: left;
+  color: #fff;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.know-more-btn {
+  align-self: end;
+  padding: 5px 10px;
+  background: rgba(237, 237, 237, 0.89);
+  border: 1px rgba(237, 237, 237, 0.89);
+  border-radius: 10px;
+  box-shadow: -5px 5px 0px #bf2328;
+}
+
+.know-more-btn a {
+  font-family: "Montserrat";
+  color: #000;
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.know-more-btn:active {
+  transform: translate(-5px, 5px);
+  box-shadow: 0px 0px 0px #bf2328;
+}
+
+/* Movies page properties */
+.movie-catelogue {
+  padding: 50px;
+}
+
+.rows {
+  margin-bottom: 50px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie img {
+  width: 80%;
+  transition: 0.3s;
+  border-radius: 20px;
+  box-shadow: -1px 1px 5px rgb(47, 47, 47);
+}
+
+.movie img:hover {
+  transform: translateY(-10px);
+}
+
+.movie-name {
+  margin: 5px 0 0 0;
+  font-family: "Montserrat";
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.movie-year {
+  margin: 0px;
+  font-family: "Montserrat";
+  color: #929292;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+/* Armours page properties */
+.armour-catelogue {
+  padding: 50px;
+}
+
+.armour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.armour-name {
+  margin: 5px 0 0 0;
+  font-family: "Montserrat";
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.armour-description {
+  margin: 0px;
+  font-family: "Montserrat";
+  color: #929292;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.detailed-description {
+  font-family: "Montserrat";
+  color: #fff;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+/* card flipping animation */
+.card-container,
+.front img,
+.back {
+  width: 280px;
+  height: 380px;
+  border-radius: 20px;
+}
+
+.back {
+  padding: 15px;
+  background-color: rgb(61, 61, 61);
+}
+
+.card-container {
+  position: relative;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition: transform 0.8s ease;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.card-container:hover .front {
+  transform: rotateY(-180deg);
+}
+
+.card-container:hover .back {
+  transform: rotateY(0deg);
+}
+
+.card-container {
+  perspective: 75rem;
+}
